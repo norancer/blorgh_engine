@@ -1,5 +1,5 @@
 PATH
-  remote: /vagrant/vendor/engines/blorgh
+  remote: /Users/hirao/vagrant/myapp/engine_test/mountable_test1/vendor/engines/blorgh
   specs:
     blorgh (0.0.1)
       draper
@@ -306,7 +306,6 @@ DEPENDENCIES
   capybara
   coffeelint
   database_cleaner
-  factory_girl_rails
   fuubar
   guard-brakeman
   guard-rspec
