@@ -1,19 +1,18 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Articles</h1>
 
-<table>
+<table class="footable">
   <thead>
     <tr>
-      <th>summary</th>
-      <th colspan="3"></th>
+      <th data-class="expand">summary</th>
+      <th data-hide="phone"></th>
+      <th data-hide="phone"></th>
+      <th data-hide="phone"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-
         <td><%= article.summary  %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>

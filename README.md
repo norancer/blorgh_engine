@@ -17,7 +17,7 @@ git clone:
 
 Gemfile.local:
 
-`vi Gemfile.local`
+`vi Gemfile.plugin`
 
     gem 'blorgh', path: "vendor/engines/blorgh"
 
@@ -44,8 +44,6 @@ app_config:
      - Blorgh
 
 bundle:
-
-`export BUNDLE_GEMFILE=Gemfile.local`
 
 `bundle install --path vendor/bundle`
 

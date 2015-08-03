@@ -1,0 +1,2 @@
+
+FactoryGirl.create(:testuser)
