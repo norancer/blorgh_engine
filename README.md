@@ -5,7 +5,7 @@ README
 
 * ruby-2.2.2
 
-# Installation
+# Install to the main application
 
 go to main application directory:
 
@@ -63,3 +63,98 @@ migration:
 start:
 
 `bundle exec rails s -b 0.0.0.0`
+
+
+# Run a dummy application:
+
+git clone:
+
+`git clone https://github.com/norancer/blorgh_engine.git`
+
+change directory:
+
+`cd blorgh_engine/spec/dummy/`
+
+bundle:
+
+`bundle install --path vendor/bundle`
+
+migration:
+
+`bundle exec rake db:migrate`
+
+start a dummy application:
+
+`bundle exec rails s -b 0.0.0.0
+
+please access to http://0.0.0.0:3000/blog/ .
+
+# Development tips
+
+Rspec, please run on dummy app directory .
+And the others , please run a plug-in root directory .
+
+rspec unit test:
+
+    cd spec/dummy/
+    bundle exec rspec -fd
+
+rspec coverage:
+
+    cd spec/dummy/
+    COVERAGE=on bundle exec rspec -fd
+
+rspec integration test:
+
+    cd spec/dummy/
+    bundle exec rspec spec/acceptance -r turnip/rspec -fd
+
+ruby code analyzer:
+
+    bundle exec rubocop -c .rubocop.yml --rails -D
+
+automates:
+
+    # unit test
+    cd spec/dummy/
+    bundle exec guard -p
+
+scss code analyzer:
+
+    bundle exec scss-lint
+
+coffee script analyzer:
+
+    yum install epel-release
+    yum install nodejs npm --enablerepo=epel
+    yum install gcc gcc-c++
+    npm install -g coffeelint
+
+    bundle exec coffeelint -r ./app/assets/javascripts
+
+rails best practices:
+
+    bundle exec rails_best_practices
+
+rails security scanner:
+
+    bundle exec brakeman
+
+N+1 query scanner:
+
+    Please run in a browser.  
+    If applicable query is found, the alert display is output.
+
+documentation:
+
+    bundle exec yard
+
+erd:
+
+    yum -y install graphviz
+
+    bundle exec erd
+
+erb to slim:
+
+    bundle exec erb2slim app/views app/views -d
