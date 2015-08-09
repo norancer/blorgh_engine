@@ -1,5 +1,6 @@
-require "blorgh/engine"
+require 'blorgh/engine'
 
+# Blorgh module
 module Blorgh
   mattr_accessor :author_class
 

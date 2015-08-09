@@ -21,6 +21,12 @@ Gemfile.local:
 
     gem 'blorgh', path: "vendor/engines/blorgh"
 
+seeds:
+
+`vi db/seeds/blorgh.rb`
+
+    Blorgh::Engine.load_seed
+
 routes:
 
 `vi config/routes/blorgh.rb`
@@ -28,7 +34,6 @@ routes:
     Rails.application.routes.draw do
       mount Blorgh::Engine, at: "/blog", as: 'blorgh'
     end
-
 
 Model of association:
 
@@ -58,4 +63,3 @@ migration:
 start:
 
 `bundle exec rails s -b 0.0.0.0`
-

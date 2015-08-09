@@ -8,8 +8,9 @@ module Blorgh
     before_save :set_author
 
     private
-      def set_author
-        self.author = Blorgh.author_class.find_or_create_by(name: author_name)
-      end
+
+    def set_author
+      self.author = Blorgh.author_class.find_or_create_by(name: author_name)
+    end
   end
 end

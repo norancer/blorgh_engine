@@ -27,6 +27,5 @@ GuardClause:
 CyclomaticComplexity:
   Max: 10
 
- 
-
-
+Style/BlockComments:
+  Enabled: false

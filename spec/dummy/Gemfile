@@ -1,3 +1,9 @@
 source 'https://rubygems.org'
 
 gemspec path: File.expand_path('../../../', __FILE__)
+
+
+spec = Bundler.load_gemspec(Dir["../../{,*}.gemspec"].first)
+spec.runtime_dependencies.each do |dep|
+  gem dep.name, *(dep.requirement.as_list)
+end
